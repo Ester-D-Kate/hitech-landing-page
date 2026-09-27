@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { SiteFooter } from "@/components/site/site-footer"
 import { SiteHeader } from "@/components/site/site-header"
+import { ScrollMotion } from "@/components/site/scroll-motion"
 import type { SiteLayoutProps } from "@/types"
 import "./globals.css"
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: SiteLayoutProps) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className="flex min-h-screen flex-col">
+        <ScrollMotion />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

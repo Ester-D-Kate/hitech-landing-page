@@ -16,7 +16,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-forest text-white">
+      <section className="home-hero relative isolate overflow-hidden bg-forest text-white">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/assets/completed/00-55-53-variant-1.jpeg"
@@ -24,25 +24,25 @@ export default function HomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-25"
+            className="home-hero-photo object-cover object-center opacity-25"
             unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/90 to-forest/30" />
         </div>
         <div className="mx-auto grid min-h-[620px] max-w-[1440px] items-end gap-14 px-6 pb-16 pt-20 sm:px-10 sm:pb-20 lg:grid-cols-[1fr_0.55fr] lg:items-center lg:px-16 lg:py-28">
-          <div className="max-w-3xl">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.24em] text-brass-light">Amritsar · Residential construction</p>
-            <h1 className="font-serif text-5xl leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-[82px]">Built with care.<br /><span className="text-brass-light">Grounded in engineering.</span></h1>
-            <p className="mt-7 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">From the first site conversation to the final finish, HITECH brings thoughtful planning and experienced construction oversight to homes across Amritsar and Punjab.</p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <LinkButton href="/contact" className="h-12 rounded-full bg-brass px-6 text-sm font-semibold text-forest hover:bg-brass-light">Discuss your project <ArrowRight aria-hidden="true" /></LinkButton>
+          <div className="relative z-10 max-w-3xl">
+            <p data-reveal="up" className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-brass-light"><span className="h-px w-8 bg-brass-light" />Amritsar · Residential construction</p>
+            <h1 data-reveal="up" data-reveal-delay="1" className="font-serif text-5xl leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-[82px]">Built with care.<br /><span className="text-brass-light">Grounded in engineering.</span></h1>
+            <p data-reveal="up" data-reveal-delay="2" className="mt-7 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">From the first site conversation to the final finish, HITECH brings thoughtful planning and experienced construction oversight to homes across Amritsar and Punjab.</p>
+            <div data-reveal="up" data-reveal-delay="3" className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <LinkButton href="/contact" variant="gold" className="h-12 rounded-full px-6 text-sm font-semibold">Discuss your project <ArrowRight aria-hidden="true" /></LinkButton>
               <LinkButton href="/projects" variant="outline" className="h-12 rounded-full border-white/30 bg-transparent px-6 text-sm text-white hover:bg-white/10 hover:text-white">Explore our work <MoveUpRight aria-hidden="true" /></LinkButton>
             </div>
-            <p className="mt-9 text-xs font-medium uppercase tracking-[0.17em] text-white/55">Building Trust Brick by Brick.</p>
+            <p data-reveal="up" data-reveal-delay="4" className="mt-9 text-xs font-medium uppercase tracking-[0.17em] text-white/55">Building Trust Brick by Brick.</p>
           </div>
-          <div className="hidden self-end lg:block">
+          <div data-reveal="from-left" className="relative z-10 hidden self-end lg:block">
             <div className="ml-auto max-w-[300px] border-l border-brass-light/50 pl-6">
-              <span className="font-serif text-4xl text-brass-light">30+</span>
+              <span className="font-serif text-5xl text-brass-light">30+</span>
               <p className="mt-2 text-sm leading-6 text-white/70">Years of practical experience from founder Engineer Pradeep Kumar.</p>
               <Link href="/about" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brass-light">Meet the team <ArrowDownRight aria-hidden="true" className="size-4" /></Link>
             </div>
@@ -55,7 +55,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-20">
             <SectionHeading eyebrow="What we do" title="A considered approach to building a home." />
-            <p className="max-w-2xl text-base leading-7 text-muted-foreground">Good construction connects the brief, the structure, the site, and the people carrying out the work. We bring these parts together through five connected capabilities.</p>
+            <p data-reveal="from-left" className="max-w-2xl text-base leading-7 text-muted-foreground">Good construction connects the brief, the structure, the site, and the people carrying out the work. We bring these parts together through five connected capabilities.</p>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => <ServiceCard key={service.number} service={service} />)}
@@ -63,18 +63,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#eeeee6] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+      <section className="bg-[#e9ede5] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20">
-          <div>
+          <div data-reveal="up">
             <SectionHeading eyebrow="Residential construction" title="A home takes shape one clear decision at a time." description="We coordinate the work around your brief and the realities of the site, with practical conversations at each stage." />
             <ul className="mt-8 space-y-4 border-t border-forest/15 pt-6 text-sm text-ink/75">
-              <li className="flex gap-3"><span className="text-brass">01</span> A scope shaped around the project</li>
-              <li className="flex gap-3"><span className="text-brass">02</span> Engineering and execution considered together</li>
-              <li className="flex gap-3"><span className="text-brass">03</span> Agreed stages and decisions made visible</li>
+              <li data-reveal="up" data-reveal-delay="1" className="flex gap-3"><span className="font-serif text-brass">01</span> A scope shaped around the project</li>
+              <li data-reveal="up" data-reveal-delay="2" className="flex gap-3"><span className="font-serif text-brass">02</span> Engineering and execution considered together</li>
+              <li data-reveal="up" data-reveal-delay="3" className="flex gap-3"><span className="font-serif text-brass">03</span> Agreed stages and decisions made visible</li>
             </ul>
             <LinkButton href="/turnkey-construction" variant="outline" className="mt-8 h-11 rounded-full border-forest/20 bg-transparent px-5 text-forest hover:bg-white">How turnkey works <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
-          <div className="relative min-h-[380px] overflow-hidden rounded-sm bg-forest/10 sm:min-h-[520px]">
+          <div data-reveal="scale" className="relative min-h-[380px] overflow-hidden rounded-sm bg-forest/10 shadow-[0_28px_70px_rgba(20,57,43,0.16)] sm:min-h-[520px]">
             <Image src="/assets/completed/00-55-53-variant-1.jpeg" alt="A completed multi-level residence illuminated at night" fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" unoptimized />
             <div className="absolute bottom-0 left-0 max-w-xs bg-forest px-6 py-5 text-white sm:px-8 sm:py-6">
               <p className="text-xs uppercase tracking-[0.18em] text-brass-light">Our point of view</p>
@@ -97,7 +97,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+      <section className="bg-sage/25 px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <SectionHeading eyebrow="How we work" title="Clear stages, shaped around the project." description="Every brief and site is different. The conversation moves through practical steps, with scope and decisions agreed along the way." />
@@ -109,19 +109,19 @@ export default function HomePage() {
 
       <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-24">
-          <div className="relative aspect-[4/5] max-h-[560px] overflow-hidden bg-forest/10">
+          <div data-reveal="scale" className="relative aspect-[4/5] max-h-[560px] overflow-hidden bg-forest/10 shadow-[0_28px_70px_rgba(20,57,43,0.14)]">
             <Image src="/assets/in-progress/01-09-28.jpeg" alt="Residential construction underway, showing masonry and structural work" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" unoptimized />
             <span className="absolute bottom-4 left-4 bg-cream/95 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-forest">Building in progress</span>
           </div>
-          <div>
+          <div data-reveal="up">
             <SectionHeading eyebrow="People behind the work" title="Experience on site. Care in the details." description="HITECH is led by professionals who bring practical construction knowledge and engineering perspective to each conversation." />
             <div className="mt-9 grid gap-7 border-t border-forest/15 pt-7 sm:grid-cols-2">
-              <div>
+              <div data-reveal="up" data-reveal-delay="1">
                 <p className="font-serif text-2xl text-forest">Engineer Pradeep Kumar</p>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-[0.15em] text-brass">Founder & Principal</p>
                 <p className="mt-4 text-sm leading-6 text-muted-foreground">More than 30 years of practical experience in construction, guiding projects from early discussions through on-site work.</p>
               </div>
-              <div>
+              <div data-reveal="up" data-reveal-delay="2">
                 <p className="font-serif text-2xl text-forest">Engineer Hemant</p>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-[0.15em] text-brass">Managing & Technical Director</p>
                 <p className="mt-4 text-sm leading-6 text-muted-foreground">A Civil Engineer with an M.Tech in Structural Engineering, bringing technical coordination into the project conversation.</p>

@@ -69,6 +69,10 @@ export type ProjectCardProps = {
   item: ProjectMedia
 }
 
+export type ProjectLightboxProps = {
+  item: ProjectMedia
+}
+
 export type ServiceCardProps = {
   service: Service
 }
@@ -113,7 +117,7 @@ export type BrandLogoProps = {
   variant: "header" | "footer"
 }
 
-export type ButtonVariant = "default" | "outline" | "secondary" | "ghost" | "destructive" | "link"
+export type ButtonVariant = "default" | "outline" | "secondary" | "ghost" | "destructive" | "link" | "gold"
 export type ButtonSize = "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg"
 
 export type LinkButtonProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
