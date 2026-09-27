@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import { ArrowRight, Compass, HardHat, MapPin } from "lucide-react"
 import { LinkButton } from "@/components/ui/link-button"
 import { ContactCTA } from "@/components/site/contact-cta"
@@ -47,8 +46,21 @@ export default function AboutPage() {
       </section>
       <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center lg:gap-20">
-          <div className="relative aspect-[4/3] overflow-hidden bg-forest/10">
-            <Image src="/assets/completed/00-55-53-variant-1.jpeg" alt="A completed multi-level residence illuminated at night" fill sizes="(max-width: 768px) 100vw, 55vw" className="object-cover" unoptimized />
+          <div role="img" aria-label="Illustration of HITECH’s service area based in Amritsar, Punjab" className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-forest p-8 text-white">
+            <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(190,154,81,0.2),transparent_58%)]" />
+            <div aria-hidden="true" className="absolute size-[min(78%,28rem)] rounded-full border border-brass/25" />
+            <div aria-hidden="true" className="absolute size-[min(58%,21rem)] rounded-full border border-brass/20" />
+            <div aria-hidden="true" className="absolute size-[min(38%,14rem)] rounded-full border border-brass/15" />
+            <div className="relative flex flex-col items-center text-center">
+              <div className="mb-5 flex size-14 items-center justify-center rounded-full border border-brass/50 bg-white/5 text-brass">
+                <MapPin aria-hidden="true" className="size-6" />
+              </div>
+              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-brass">Our home base</p>
+              <p className="mt-3 font-serif text-4xl sm:text-5xl">Amritsar</p>
+              <p className="mt-3 text-sm tracking-wide text-white/75">Punjab, India</p>
+              <span className="mt-6 h-px w-10 bg-brass/70" />
+              <p className="mt-4 text-xs uppercase tracking-[0.17em] text-white/65">Working across Amritsar district</p>
+            </div>
           </div>
           <div>
             <SectionHeading eyebrow="Where we work" title="Rooted in Amritsar." description="We are based in Amritsar and work across Amritsar district. Projects elsewhere in Punjab are considered based on location and scope." />
