@@ -1,6 +1,5 @@
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 
 export function ContactCTA() {
   return (
@@ -11,9 +10,9 @@ export function ContactCTA() {
           <h2 className="font-serif text-3xl leading-tight tracking-[-0.03em] sm:text-4xl">Let’s begin with a clear conversation.</h2>
           <p className="mt-4 max-w-xl text-sm leading-6 text-white/65">Share where you are in the process and what you hope to build. We’ll take it from there.</p>
         </div>
-        <Button render={<Link href="/contact" />} className="h-12 shrink-0 rounded-full bg-brass px-6 text-sm text-forest hover:bg-brass-light">
+        <LinkButton href="/contact" className="h-12 shrink-0 rounded-full bg-brass px-6 text-sm text-forest hover:bg-brass-light">
           Discuss your project <ArrowRight aria-hidden="true" />
-        </Button>
+        </LinkButton>
       </div>
     </section>
   )

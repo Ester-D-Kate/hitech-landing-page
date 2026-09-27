@@ -34,7 +34,7 @@ export default function RootLayout({ children }: SiteLayoutProps) {
   }
 
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="flex min-h-screen flex-col">
         <script
           type="application/ld+json"

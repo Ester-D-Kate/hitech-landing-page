@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ArrowUpRight, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 import { BrandLogo } from "@/components/site/brand-logo"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { navigationItems } from "@/data/site"
@@ -35,9 +36,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden xl:block">
-          <Button render={<Link href="/contact" />} className="h-10 rounded-full bg-forest px-5 text-xs text-white hover:bg-forest/90">
+          <LinkButton href="/contact" className="h-10 rounded-full bg-forest px-5 text-xs text-white hover:bg-forest/90">
             Discuss a project <ArrowUpRight aria-hidden="true" />
-          </Button>
+          </LinkButton>
         </div>
 
         <div className="xl:hidden">

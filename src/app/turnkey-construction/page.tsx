@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
 import { ArrowRight, Check, ClipboardList, DraftingCompass, HardHat, PanelsTopLeft } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 import { FAQSection } from "@/components/site/faq-section"
 import { PageHero } from "@/components/site/page-hero"
 import { SectionHeading } from "@/components/site/section-heading"
@@ -28,7 +27,7 @@ export default function TurnkeyPage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
           <div className="lg:sticky lg:top-10 lg:self-start">
             <SectionHeading eyebrow="A clear scope" title="Together, we define what the project needs." description="Turnkey does not mean every project follows the same checklist. The scope is shaped around the house, site, and agreement." />
-            <Button render={<Link href="/contact" />} className="mt-8 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Start a scope conversation <ArrowRight aria-hidden="true" /></Button>
+            <LinkButton href="/contact" className="mt-8 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Start a scope conversation <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
           <div className="grid gap-0 border-t border-forest/15 sm:grid-cols-2">
             {scopeAreas.map((area, index) => {

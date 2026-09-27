@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
 import { ArrowRight, Compass, HardHat, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 import { ContactCTA } from "@/components/site/contact-cta"
 import { PageHero } from "@/components/site/page-hero"
 import { SectionHeading } from "@/components/site/section-heading"
@@ -23,7 +22,7 @@ export default function AboutPage() {
             <p>HITECH Structure & Construction brings design, engineering, and execution into the same conversation. We work through the requirements and constraints with clients, then coordinate the next steps around the scope agreed for that project.</p>
             <p>Residential construction is at the centre of our work. We also support design and engineering, turnkey execution, renovation and retrofitting, and consultancy for people considering a site or property project.</p>
             <p>Our work is based in Amritsar, with projects across Amritsar district and Punjab considered according to scope and location.</p>
-            <Button render={<Link href="/services" />} className="mt-2 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Explore our services <ArrowRight aria-hidden="true" /></Button>
+            <LinkButton href="/services" className="mt-2 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Explore our services <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { ArrowRight, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 import { ContactCTA } from "@/components/site/contact-cta"
 import { PageHero } from "@/components/site/page-hero"
 import { SectionHeading } from "@/components/site/section-heading"
@@ -36,7 +35,7 @@ export default function ServicesPage() {
               "Renovation, repair, or retrofitting of an existing home",
               "Early guidance on a property or development question",
             ].map((item) => <div key={item} className="flex gap-4 border-b border-forest/15 py-5 text-sm leading-6 text-ink/75"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-brass" />{item}</div>)}
-            <Button render={<Link href="/contact" />} className="mt-7 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Tell us about your project <ArrowRight aria-hidden="true" /></Button>
+            <LinkButton href="/contact" className="mt-7 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Tell us about your project <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowDownRight, ArrowRight, MoveUpRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 import { ContactCTA } from "@/components/site/contact-cta"
 import { FAQSection } from "@/components/site/faq-section"
 import { ProcessSteps } from "@/components/site/process-steps"
@@ -35,8 +35,8 @@ export default function HomePage() {
             <h1 className="font-serif text-5xl leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-[82px]">Built with care.<br /><span className="text-brass-light">Grounded in engineering.</span></h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">From the first site conversation to the final finish, HITECH brings thoughtful planning and experienced construction oversight to homes across Amritsar and Punjab.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button render={<Link href="/contact" />} className="h-12 rounded-full bg-brass px-6 text-sm font-semibold text-forest hover:bg-brass-light">Discuss your project <ArrowRight aria-hidden="true" /></Button>
-              <Button render={<Link href="/projects" />} variant="outline" className="h-12 rounded-full border-white/30 bg-transparent px-6 text-sm text-white hover:bg-white/10 hover:text-white">Explore our work <MoveUpRight aria-hidden="true" /></Button>
+              <LinkButton href="/contact" className="h-12 rounded-full bg-brass px-6 text-sm font-semibold text-forest hover:bg-brass-light">Discuss your project <ArrowRight aria-hidden="true" /></LinkButton>
+              <LinkButton href="/projects" variant="outline" className="h-12 rounded-full border-white/30 bg-transparent px-6 text-sm text-white hover:bg-white/10 hover:text-white">Explore our work <MoveUpRight aria-hidden="true" /></LinkButton>
             </div>
             <p className="mt-9 text-xs font-medium uppercase tracking-[0.17em] text-white/55">Building Trust Brick by Brick.</p>
           </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
               <li className="flex gap-3"><span className="text-brass">02</span> Engineering and execution considered together</li>
               <li className="flex gap-3"><span className="text-brass">03</span> Agreed stages and decisions made visible</li>
             </ul>
-            <Button render={<Link href="/turnkey-construction" />} variant="outline" className="mt-8 h-11 rounded-full border-forest/20 bg-transparent px-5 text-forest hover:bg-white">How turnkey works <ArrowRight aria-hidden="true" /></Button>
+            <LinkButton href="/turnkey-construction" variant="outline" className="mt-8 h-11 rounded-full border-forest/20 bg-transparent px-5 text-forest hover:bg-white">How turnkey works <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
           <div className="relative min-h-[380px] overflow-hidden rounded-sm bg-forest/10 sm:min-h-[520px]">
             <Image src="/assets/completed/00-55-53-variant-1.jpeg" alt="A completed multi-level residence illuminated at night" fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" unoptimized />

@@ -1,3 +1,5 @@
+import type { AnchorHTMLAttributes } from "react"
+
 import type { LucideIcon } from "lucide-react"
 
 export type NavigationItem = {
@@ -109,4 +111,13 @@ export type SiteLayoutProps = {
 
 export type BrandLogoProps = {
   variant: "header" | "footer"
+}
+
+export type ButtonVariant = "default" | "outline" | "secondary" | "ghost" | "destructive" | "link"
+export type ButtonSize = "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg"
+
+export type LinkButtonProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
+  href: string
+  variant?: ButtonVariant
+  size?: ButtonSize
 }

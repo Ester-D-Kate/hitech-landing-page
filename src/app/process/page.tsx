@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/link-button"
 import { ContactCTA } from "@/components/site/contact-cta"
 import { ProcessSteps } from "@/components/site/process-steps"
 import { ProjectCard } from "@/components/site/project-card"
@@ -31,7 +30,7 @@ export default function ProcessPage() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading eyebrow="On-site process" title="Construction work in motion." description="These supplied videos show selected activities from active projects. Each clip is available with native playback controls." />
-            <Button render={<Link href="/projects" />} variant="outline" className="h-11 w-fit rounded-full border-forest/20 bg-transparent px-5 text-forest hover:bg-cream">Browse all media <ArrowRight aria-hidden="true" /></Button>
+            <LinkButton href="/projects" variant="outline" className="h-11 w-fit rounded-full border-forest/20 bg-transparent px-5 text-forest hover:bg-cream">Browse all media <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {processVideos.map((item) => <ProjectCard key={item.id} item={item} />)}
