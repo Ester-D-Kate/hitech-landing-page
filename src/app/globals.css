@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --color-forest: #173c2e;
+  --color-brass: #a47f31;
+  --color-brass-light: #d9bb69;
+  --color-cream: #f7f5ef;
+  --color-ink: #1d2420;
+  --color-sage: #e3e9df;
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #f7f5ef;
+  --foreground: #1d2420;
+  --card: #fffefa;
+  --card-foreground: #1d2420;
+  --popover: #fffefa;
+  --popover-foreground: #1d2420;
+  --primary: #173c2e;
+  --primary-foreground: #fffefa;
+  --secondary: #e3e9df;
+  --secondary-foreground: #173c2e;
+  --muted: #eeede7;
+  --muted-foreground: #68736b;
+  --accent: #e3e9df;
+  --accent-foreground: #173c2e;
+  --destructive: #b54747;
+  --border: #dfe2d9;
+  --input: #dfe2d9;
+  --ring: #a47f31;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+  }
+
+  ::selection {
+    background: #d9bb69;
+    color: #173c2e;
+  }
+}
