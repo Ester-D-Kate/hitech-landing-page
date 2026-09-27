@@ -25,7 +25,7 @@ export default function TurnkeyPage() {
       <PageHero eyebrow="Turnkey construction" title="One joined-up conversation from plan to finish." description="Turnkey work brings agreed stages together under a coordinated project scope. What is included depends on the site, brief, and decisions made for each home." image="/assets/in-progress/00-57-24.jpeg" imageAlt="Residential masonry and construction work in progress" />
       <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
-          <div className="lg:sticky lg:top-10 lg:self-start">
+          <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionHeading eyebrow="A clear scope" title="Together, we define what the project needs." description="Turnkey does not mean every project follows the same checklist. The scope is shaped around the house, site, and agreement." />
             <LinkButton href="/contact" className="mt-8 h-11 rounded-full bg-forest px-5 text-sm text-white hover:bg-forest/90">Start a scope conversation <ArrowRight aria-hidden="true" /></LinkButton>
           </div>

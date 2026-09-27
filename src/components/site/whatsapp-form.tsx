@@ -35,7 +35,7 @@ export function WhatsAppForm() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="service">What do you need help with?</Label>
-          <select id="service" name="service" defaultValue="Residential construction" className="h-12 w-full rounded-xl border border-input bg-cream/60 px-3 text-sm text-ink outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <select id="service" name="service" defaultValue="Residential construction" className="h-12 w-full rounded-xl border border-input bg-cream/60 px-3 text-base text-ink outline-none focus-visible:ring-2 focus-visible:ring-ring md:text-sm">
             <option>Residential construction</option>
             <option>Design & engineering</option>
             <option>Turnkey execution</option>
@@ -49,7 +49,7 @@ export function WhatsAppForm() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="stage">Project stage</Label>
-          <select id="stage" name="stage" defaultValue="Exploring" className="h-12 w-full rounded-xl border border-input bg-cream/60 px-3 text-sm text-ink outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <select id="stage" name="stage" defaultValue="Exploring" className="h-12 w-full rounded-xl border border-input bg-cream/60 px-3 text-base text-ink outline-none focus-visible:ring-2 focus-visible:ring-ring md:text-sm">
             <option>Exploring</option>
             <option>Planning and design</option>
             <option>Ready to start construction</option>
@@ -68,7 +68,7 @@ export function WhatsAppForm() {
       </div>
       <div className="flex flex-col gap-4 border-t border-forest/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-md text-xs leading-5 text-muted-foreground">Your details will be prepared as a WhatsApp message. Review it there before sending; this website does not store the form.</p>
-        <Button type="submit" className="h-12 shrink-0 rounded-full bg-forest px-6 text-sm text-white hover:bg-forest/90">
+        <Button type="submit" className="h-12 w-full shrink-0 rounded-full bg-forest px-6 text-sm text-white hover:bg-forest/90 sm:w-auto">
           Continue in WhatsApp <ArrowUpRight aria-hidden="true" />
         </Button>
       </div>

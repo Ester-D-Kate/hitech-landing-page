@@ -3,11 +3,11 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import type { ServiceCardProps } from "@/types"
 
-export function ServiceCard({ service }: ServiceCardProps) {
+export function ServiceCard({ service, revealDelay }: ServiceCardProps) {
   const Icon = service.icon
 
   return (
-    <Card data-reveal="up" className="card-float group h-full rounded-2xl border-forest/10 bg-white shadow-[0_8px_24px_rgba(20,57,43,0.04)] hover:border-brass/40 hover:bg-cream/70">
+    <Card data-reveal="up" data-reveal-delay={revealDelay ? String(revealDelay) : undefined} className="card-float group h-full rounded-2xl border-forest/10 bg-white shadow-[0_8px_24px_rgba(20,57,43,0.04)] hover:border-brass/40 hover:bg-cream/70">
       <CardHeader className="flex-row items-center justify-between space-y-0 pb-5">
         <span className="font-serif text-sm text-brass">{service.number}</span>
         <span className="flex size-12 items-center justify-center rounded-full bg-sage/70 text-forest transition-all duration-300 group-hover:rotate-[-5deg] group-hover:bg-forest group-hover:text-brass-light">

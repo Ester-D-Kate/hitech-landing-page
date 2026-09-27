@@ -24,7 +24,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-brass-light">Start a conversation</h2>
-          <a href={"mailto:" + businessEmail} className="mt-5 inline-flex items-center gap-2 text-sm text-white/75 hover:text-white">
+          <a href={"mailto:" + businessEmail} className="mt-5 inline-flex min-w-0 max-w-full items-center gap-2 text-sm text-white/75 hover:text-white">
             <Mail aria-hidden="true" className="size-4" /> {businessEmail}
           </a>
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/55">Based in Amritsar, working across Amritsar district and Punjab.</p>

@@ -45,7 +45,7 @@ export function SiteHeader() {
 
         <div className="xl:hidden">
           <Sheet open={mobileMenuOpen} onOpenChange={(open) => setMobileMenuOpen(open)}>
-            <SheetTrigger render={<Button type="button" variant="outline" size="icon" aria-label="Open navigation menu" className="rounded-full border-forest/15 bg-white" />}>
+            <SheetTrigger render={<Button type="button" variant="outline" size="icon-lg" aria-label="Open navigation menu" className="size-11 rounded-full border-forest/15 bg-white" />}>
               <Menu aria-hidden="true" />
             </SheetTrigger>
             <SheetContent side="right" className="w-[88vw] max-w-sm border-forest/10 bg-cream p-0 text-ink shadow-2xl shadow-forest/20">

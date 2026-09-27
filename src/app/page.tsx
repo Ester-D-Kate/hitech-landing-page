@@ -29,7 +29,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/90 to-forest/30" />
         </div>
-        <div className="mx-auto grid min-h-[620px] max-w-[1440px] items-end gap-14 px-6 pb-16 pt-20 sm:px-10 sm:pb-20 lg:grid-cols-[1fr_0.55fr] lg:items-center lg:px-16 lg:py-28">
+        <div className="mx-auto grid min-h-[calc(100svh-4.25rem)] max-h-[760px] max-w-[1440px] items-end gap-14 px-6 pb-16 pt-20 sm:min-h-[620px] sm:max-h-none sm:px-10 sm:pb-20 lg:min-h-[680px] lg:grid-cols-[1fr_0.55fr] lg:items-center lg:px-16 lg:py-28">
           <div className="relative z-10 max-w-3xl">
             <p data-reveal="up" className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-brass-light"><span className="h-px w-8 bg-brass-light" />Amritsar · Residential construction</p>
             <h1 data-reveal="up" data-reveal-delay="1" className="font-serif text-5xl leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-[82px]">Built with care.<br /><span className="text-brass-light">Grounded in engineering.</span></h1>
@@ -58,7 +58,7 @@ export default function HomePage() {
             <p data-reveal="from-left" className="max-w-2xl text-base leading-7 text-muted-foreground">Good construction connects the brief, the structure, the site, and the people carrying out the work. We bring these parts together through five connected capabilities.</p>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => <ServiceCard key={service.number} service={service} />)}
+            {services.map((service, index) => <ServiceCard key={service.number} service={service} revealDelay={(index % 4) + 1} />)}
           </div>
         </div>
       </section>
@@ -91,9 +91,9 @@ export default function HomePage() {
             <Link href="/projects" className="inline-flex shrink-0 items-center gap-2 pb-1 text-sm font-semibold text-forest hover:text-brass">Browse all {projectMedia.length} photos and videos <ArrowRight aria-hidden="true" className="size-4" /></Link>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {completedProjects.map((item) => <ProjectCard key={item.id} item={item} />)}
+            {completedProjects.map((item, index) => <ProjectCard key={item.id} item={item} revealDelay={(index % 4) + 1} />)}
           </div>
-          {completedProjects.length === 0 ? <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{featuredProjects.slice(0, 3).map((item) => <ProjectCard key={item.id} item={item} />)}</div> : null}
+          {completedProjects.length === 0 ? <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{featuredProjects.slice(0, 3).map((item, index) => <ProjectCard key={item.id} item={item} revealDelay={index + 1} />)}</div> : null}
         </div>
       </section>
 

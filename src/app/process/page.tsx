@@ -33,7 +33,7 @@ export default function ProcessPage() {
             <LinkButton href="/projects" variant="outline" className="h-11 w-fit rounded-full border-forest/20 bg-transparent px-5 text-forest hover:bg-cream">Browse all media <ArrowRight aria-hidden="true" /></LinkButton>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {processVideos.map((item) => <ProjectCard key={item.id} item={item} />)}
+            {processVideos.map((item, index) => <ProjectCard key={item.id} item={item} revealDelay={index + 1} />)}
           </div>
         </div>
       </section>

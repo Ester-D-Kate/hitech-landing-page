@@ -67,6 +67,7 @@ export type ProjectMedia = {
 
 export type ProjectCardProps = {
   item: ProjectMedia
+  revealDelay?: number
 }
 
 export type ProjectLightboxProps = {
@@ -75,6 +76,7 @@ export type ProjectLightboxProps = {
 
 export type ServiceCardProps = {
   service: Service
+  revealDelay?: number
 }
 
 export type ProcessStepsProps = {

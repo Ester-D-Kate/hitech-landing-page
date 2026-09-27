@@ -37,7 +37,7 @@ export function ProjectGallery({ items }: ProjectGalleryProps) {
         return (
           <TabsContent key={tab.value} value={tab.value} className="mt-0">
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {visibleItems.map((item) => <ProjectCard key={item.id} item={item} />)}
+              {visibleItems.map((item, index) => <ProjectCard key={item.id} item={item} revealDelay={(index % 4) + 1} />)}
             </div>
           </TabsContent>
         )

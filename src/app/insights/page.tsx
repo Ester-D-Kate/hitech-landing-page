@@ -19,8 +19,8 @@ export default function InsightsPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Project notes" title="Useful ideas before the work begins." description="These notes are a starting point for discussion, not a substitute for advice based on a specific site or building." />
           <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {insights.map((insight) => (
-              <Card key={insight.id} className="rounded-2xl border-forest/10 bg-white shadow-none">
+            {insights.map((insight, index) => (
+              <Card key={insight.id} data-reveal="up" data-reveal-delay={String((index % 4) + 1)} className="card-float rounded-2xl border-forest/10 bg-white shadow-none">
                 <CardContent className="p-6 sm:p-8">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-semibold uppercase tracking-[0.17em] text-brass">{insight.category}</span>

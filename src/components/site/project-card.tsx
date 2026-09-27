@@ -5,9 +5,9 @@ import { ProjectLightbox } from "@/components/site/project-lightbox"
 import { mediaCategoryLabels } from "@/data/media"
 import type { ProjectCardProps } from "@/types"
 
-export function ProjectCard({ item }: ProjectCardProps) {
+export function ProjectCard({ item, revealDelay }: ProjectCardProps) {
   return (
-    <Card data-reveal="up" className="card-float group overflow-hidden rounded-2xl border-forest/10 bg-white shadow-[0_8px_24px_rgba(20,57,43,0.04)]">
+    <Card data-reveal="up" data-reveal-delay={revealDelay ? String(revealDelay) : undefined} className="card-float group overflow-hidden rounded-2xl border-forest/10 bg-white shadow-[0_8px_24px_rgba(20,57,43,0.04)]">
       <div className="relative aspect-[4/3] overflow-hidden bg-forest/5">
         {item.kind === "video" ? (
           <video

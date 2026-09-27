@@ -29,13 +29,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Leadership" title="People who understand the work." description="Our leadership brings practical construction experience and structural engineering knowledge to the projects we take on." />
           <div className="mt-12 grid gap-0 border-y border-forest/15 md:grid-cols-2">
-            <article className="border-b border-forest/15 py-8 md:border-b-0 md:border-r md:py-10 md:pr-12">
+            <article data-reveal="up" className="border-b border-forest/15 py-8 md:border-b-0 md:border-r md:py-10 md:pr-12">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brass">Founder & Principal</p>
               <h2 className="mt-4 font-serif text-3xl text-forest">Engineer Pradeep Kumar</h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground">With more than 30 years of practical experience, Pradeep guides the company’s construction work and helps clients make grounded decisions as a project develops.</p>
               <div className="mt-7 flex items-center gap-3 text-sm text-ink/70"><HardHat aria-hidden="true" className="size-4 text-brass" /> Practical construction experience</div>
             </article>
-            <article className="py-8 md:py-10 md:pl-12">
+            <article data-reveal="up" data-reveal-delay="1" className="py-8 md:py-10 md:pl-12">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brass">Managing & Technical Director</p>
               <h2 className="mt-4 font-serif text-3xl text-forest">Engineer Hemant</h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground">Hemant is a Civil Engineer with an M.Tech in Structural Engineering and brings technical coordination and structural perspective to the company’s work.</p>

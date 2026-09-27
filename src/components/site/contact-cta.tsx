@@ -11,7 +11,7 @@ export function ContactCTA() {
           <h2 className="font-serif text-3xl leading-tight tracking-[-0.03em] sm:text-4xl">Let’s begin with a clear conversation.</h2>
           <p className="mt-4 max-w-xl text-sm leading-6 text-white/65">Share where you are in the process and what you hope to build. We’ll take it from there.</p>
         </div>
-        <LinkButton href="/contact" variant="gold" className="h-12 shrink-0 rounded-full px-6 text-sm font-semibold">
+        <LinkButton data-reveal="up" data-reveal-delay="1" href="/contact" variant="gold" className="h-12 shrink-0 rounded-full px-6 text-sm font-semibold">
           Discuss your project <ArrowRight aria-hidden="true" />
         </LinkButton>
       </div>

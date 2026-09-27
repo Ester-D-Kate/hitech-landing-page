@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Five connected capabilities" title="A coordinated team for the work ahead." description="Some clients need support with one part of a project. Others want joined-up coordination across several stages. We begin by understanding the brief." />
           <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => <ServiceCard key={service.number} service={service} />)}
+            {services.map((service, index) => <ServiceCard key={service.number} service={service} revealDelay={(index % 4) + 1} />)}
           </div>
         </div>
       </section>
